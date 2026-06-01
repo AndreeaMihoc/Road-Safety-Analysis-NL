@@ -1,3 +1,5 @@
+--accident dataset
+
 CREATE TABLE dbo.Ongevallen (
     VKL_NUMMER      BIGINT,
     REGNUMMER       NVARCHAR(20),
@@ -77,3 +79,32 @@ WITH (
     CODEPAGE        = '65001',
     TABLOCK
 );
+
+
+
+--road information dataset
+
+DROP TABLE IF EXISTS dbo.NWB_Wegvakken;
+
+CREATE TABLE dbo.NWB_Wegvakken (
+    WVK_ID      int,
+    WEGNUMMER   NVARCHAR(1000),
+    STT_NAAM    NVARCHAR(1000),
+    WEGBEHSRT   NVARCHAR(1000),
+    WEGTYPE     NVARCHAR(1000),
+    GME_NAAM    NVARCHAR(1000),
+    WPSNAAM     NVARCHAR(1000)
+);
+GO
+
+BULK INSERT dbo.NWB_Wegvakken
+FROM 'C:\Users\pandi\Documents\Python Scripts\HousingAnywhere\wegvakken2.txt'
+WITH (
+    FIRSTROW        = 2,
+    FIELDTERMINATOR = '|',
+    CODEPAGE        = '65001'
+);
+GO
+
+
+SELECT COUNT(*) AS TotalRows FROM dbo.NWB_Wegvakken;
