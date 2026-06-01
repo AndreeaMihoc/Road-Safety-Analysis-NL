@@ -74,6 +74,6 @@ WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR   = '\n',
     FIELDQUOTE      = '"',
-    CODEPAGE        = '65001',   -- UTF-8; try '1252' if you get encoding errors
+    CODEPAGE        = '65001',
     TABLOCK
 );
