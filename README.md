@@ -29,7 +29,7 @@ All datasets are open data, publicly available and free to use.
 
 ## 🗄️ Database Structure
 
-### `BRON_Ongevallen` — Accident records
+### `BRON_Ongevallen` - Accident records
 
 | Column | Description |
 |---|---|
@@ -44,7 +44,7 @@ All datasets are open data, publicly available and free to use.
 | `GME_NAAM` | Municipality |
 | `PVE_NAAM` | Province |
 
-### `NWB_Wegvakken` — Road segments
+### `NWB_Wegvakken` - Road segments
 
 | Column | Description |
 |---|---|
@@ -59,7 +59,7 @@ All datasets are open data, publicly available and free to use.
 
 ## ⚠️ Known Limitations
 
-- **Date and time fields** (`DATUM_VKL`, `UUR`, `DAG_CODE`) are empty in the public download — Rijkswaterstaat removed them for privacy reasons after 2020.
+- **Date and time fields** (`DATUM_VKL`, `UUR`, `DAG_CODE`) are empty in the public download - Rijkswaterstaat removed them for privacy reasons after 2020.
 - **Contributing factor fields** (`BZD_*`) are mostly empty.
 - `WEGNUMMER` is only filled for numbered roads. Regular streets use `STT_NAAM` instead.
-- Accident coordinates are not directly stored — a GIS tool would be needed for map-based analysis.
+- Accident coordinates are not directly stored.
